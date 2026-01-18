@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0f8f95" />
+  <title>Dental Clinic на Варшавке — стоматология, Москва</title>
+  <meta name="description" content="Dental Clinic на Варшавке — стоматология в Москве. Варшавское ш., 118, корп. 1. Запись по телефону и WhatsApp: +7 915 414-38-55." />
+
+  <!-- Tailwind CDN (быстрое прототипирование). Если понадобится — перенесём в сборку/Next/Vite. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#e8f7f8',
+              100: '#d0eff1',
+              200: '#a1dfe3',
+              300: '#72cfd5',
+              400: '#43bfc7',
+              500: '#1faab2',
+              600: '#0f8f95',
+              700: '#0b6c71',
+              800: '#07494d',
+              900: '#04282a'
+            },
+            accent: {
+              50:  '#fbeaec',
+              100: '#f6d5d9',
+              200: '#edabb3',
+              300: '#e3818d',
+              400: '#da5767',
+              500: '#c93b4d',
+              600: '#aa2f3f',
+              700: '#812330',
+              800: '#571720',
+              900: '#2e0b10'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2, 44, 46, .08)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Небольшие улучшения UX */
+    html { scroll-behavior: smooth; }
+    .glass { background: rgba(255,255,255,.78); backdrop-filter: blur(10px); }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+  <!-- Top bar -->
+  <div class="bg-brand-900 text-white">
+    <div class="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between text-sm">
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline">Москва, Варшавское ш., 118, корп. 1</span>
+        <span class="sm:hidden">Варшавское ш., 118к1</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a class="hover:opacity-90" href="tel:+79154143855" aria-label="Позвонить в клинику">+7 915 414-38-55</a>
+        <span class="opacity-60">•</span>
+        <a class="hover:opacity-90" href="https://wa.me/79154143855" target="_blank" rel="noreferrer" aria-label="Написать в WhatsApp">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-slate-100 glass">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-brand-600 flex items-center justify-center shadow-soft">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7.2 4.8C6.3 6.6 6 8.9 6 11c0 5.5 2.4 9 6 9s6-3.5 6-9c0-2.1-.3-4.4-1.2-6.2" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M9 6.5c.3 1.2 1.4 2.2 3 2.2s2.7-1 3-2.2" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <div class="font-semibold tracking-tight">Dental Clinic на Варшавке</div>
+          <div class="text-xs text-slate-500">Стоматология • Москва</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm">
+        <a class="hover:text-brand-700" href="#services">Услуги</a>
+        <a class="hover:text-brand-700" href="#doctors">Врачи</a>
+        <a class="hover:text-brand-700" href="#advantages">Почему мы</a>
+        <a class="hover:text-brand-700" href="#reviews">Отзывы</a>
+        <a class="hover:text-brand-700" href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#appointment" class="hidden sm:inline-flex items-center justify-center rounded-2xl bg-accent-600 px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-300">
+          Записаться
+        </a>
+        <button id="menuBtn" class="lg:hidden inline-flex items-center justify-center rounded-2xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50" aria-label="Открыть меню" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="lg:hidden hidden border-t border-slate-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-3 grid gap-2 text-sm">
+        <a class="py-2" href="#services">Услуги</a>
+        <a class="py-2" href="#doctors">Врачи</a>
+        <a class="py-2" href="#advantages">Почему мы</a>
+        <a class="py-2" href="#reviews">Отзывы</a>
+        <a class="py-2" href="#contacts">Контакты</a>
+        <a class="mt-2 inline-flex items-center justify-center rounded-2xl bg-accent-600 px-4 py-2 text-sm font-semibold text-white shadow-soft" href="#appointment">Записаться</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-white"></div>
+      <div class="relative mx-auto max-w-7xl px-4 pt-10 pb-10 sm:pt-14 sm:pb-14 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-brand-800 ring-1 ring-brand-100">
+            <span class="h-2 w-2 rounded-full bg-brand-600"></span>
+            Приём взрослых и детей
+          </div>
+          <h1 class="mt-4 text-3xl sm:text-5xl font-extrabold tracking-tight">
+            Стоматология рядом с метро: <span class="text-brand-700">быстро, аккуратно, без стресса</span>
+          </h1>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg max-w-xl">
+            Диагностика, лечение, гигиена и эстетика. Понятный план лечения и честная коммуникация.
+          </p>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#appointment" class="inline-flex items-center justify-center rounded-2xl bg-accent-600 px-6 py-3 text-sm font-semibold text-white shadow-soft hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-300">
+              Записаться на консультацию
+            </a>
+            <a href="#services" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 px-6 py-3 text-sm font-semibold hover:bg-white">
+              Смотреть услуги
+            </a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-3 gap-3 max-w-xl">
+            <div class="rounded-2xl border border-slate-100 bg-white p-4 shadow-soft">
+              <div class="text-xl font-bold text-brand-800">1 день</div>
+              <div class="text-xs text-slate-500">быстрая запись</div>
+            </div>
+            <div class="rounded-2xl border border-slate-100 bg-white p-4 shadow-soft">
+              <div class="text-xl font-bold text-brand-800">Современно</div>
+              <div class="text-xs text-slate-500">аккуратные протоколы</div>
+            </div>
+            <div class="rounded-2xl border border-slate-100 bg-white p-4 shadow-soft">
+              <div class="text-xl font-bold text-brand-800">0% воды</div>
+              <div class="text-xs text-slate-500">только по делу</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-[28px] bg-white border border-slate-100 shadow-soft overflow-hidden">
+            <div class="p-6 sm:p-8">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <div class="text-sm font-semibold text-slate-900">Dental Clinic на Варшавке</div>
+                  <div class="mt-1 text-xs text-slate-500">Варшавское ш., 118, корп. 1</div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <a href="tel:+79154143855" class="rounded-2xl bg-brand-600 px-3 py-2 text-xs font-semibold text-white hover:bg-brand-700">Позвонить</a>
+                  <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer" class="rounded-2xl border border-slate-200 px-3 py-2 text-xs font-semibold hover:bg-slate-50">WhatsApp</a>
+                </div>
+              </div>
+
+              <div class="mt-6 grid gap-3">
+                <div class="rounded-2xl bg-brand-50 p-4">
+                  <div class="text-sm font-semibold">Что получите на консультации</div>
+                  <ul class="mt-2 text-sm text-slate-600 list-disc pl-5 space-y-1">
+                    <li>Осмотр и первичная диагностика</li>
+                    <li>План лечения по шагам</li>
+                    <li>Рекомендации по уходу</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-100 p-4">
+                  <div class="text-sm font-semibold">Время работы</div>
+                  <div class="mt-2 text-sm text-slate-600">Ежедневно: 09:00–21:00</div>
+                </div>
+              </div>
+
+              <div class="mt-6 text-xs text-slate-500">
+                Имеются противопоказания. Необходима консультация специалиста.
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute -bottom-6 -left-6 h-28 w-28 rounded-full bg-accent-100 blur-2xl" aria-hidden="true"></div>
+          <div class="absolute -top-10 -right-8 h-40 w-40 rounded-full bg-brand-100 blur-2xl" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Услуги</h2>
+          <p class="mt-2 text-slate-600 max-w-2xl">Пока заполнил базовыми направлениями. Потом заменим на ваши точные услуги и цены.</p>
+        </div>
+        <a class="hidden sm:inline-flex rounded-2xl border border-slate-200 px-4 py-2 text-sm font-semibold hover:bg-slate-50" href="#appointment">Записаться</a>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- card -->
+        <div class="rounded-3xl border border-slate-100 p-6 shadow-soft">
+          <div class="text-sm font-semibold text-brand-800">Терапия</div>
+          <div class="mt-2 font-bold text-lg">Лечение кариеса и каналов</div>
+          <p class="mt-2 text-sm text-slate-600">Диагностика, пломбы, лечение пульпита/периодонтита.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-100 p-6 shadow-soft">
+          <div class="text-sm font-semibold text-brand-800">Профилактика</div>
+          <div class="mt-2 font-bold text-lg">Профессиональная гигиена</div>
+          <p class="mt-2 text-sm text-slate-600">Снятие налёта и камня, рекомендации по домашнему уходу.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-100 p-6 shadow-soft">
+          <div class="text-sm font-semibold text-brand-800">Эстетика</div>
+          <div class="mt-2 font-bold text-lg">Отбеливание</div>
+          <p class="mt-2 text-sm text-slate-600">Подбор подходящего метода и контроль чувствительности.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-100 p-6 shadow-soft">
+          <div class="text-sm font-semibold text-brand-800">Ортопедия</div>
+          <div class="mt-2 font-bold text-lg">Коронки и протезирование</div>
+          <p class="mt-2 text-sm text-slate-600">Восстановление жевательной функции и эстетики.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-100 p-6 shadow-soft">
+          <div class="text-sm font-semibold text-brand-800">Хирургия</div>
+          <div class="mt-2 font-bold text-lg">Удаление зубов</div>
+          <p class="mt-2 text-sm text-slate-600">Плановая и сложная хирургия (по показаниям).</p>
+        </div>
+        <div class="rounded-3xl border border-slate-100 p-6 shadow-soft">
+          <div class="text-sm font-semibold text-brand-800">Детям</div>
+          <div class="mt-2 font-bold text-lg">Детская стоматология</div>
+          <p class="mt-2 text-sm text-slate-600">Бережный подход, адаптация, профилактика.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctors placeholder -->
+    <section id="doctors" class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Врачи</h2>
+            <p class="mt-2 text-slate-600 max-w-2xl">Секция готова — пришлёшь фото/ФИО/специализации, и я заполню карточки.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-3xl border border-dashed border-slate-300 bg-white p-8 text-center">
+          <div class="mx-auto max-w-xl">
+            <div class="text-lg font-semibold">Пока пусто</div>
+            <p class="mt-2 text-sm text-slate-600">Добавим врачей позже. Можно будет сделать фильтр по специализациям и страницу каждого врача.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages -->
+    <section id="advantages" class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Почему выбирают нас</h2>
+      <div class="mt-8 grid lg:grid-cols-3 gap-4">
+        <div class="rounded-3xl border border-slate-100 p-6 shadow-soft">
+          <div class="text-sm font-semibold text-brand-800">Прозрачно</div>
+          <div class="mt-2 font-bold">План лечения и варианты</div>
+          <p class="mt-2 text-sm text-slate-600">Объясняем этапы, сроки и альтернативы без давления.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-100 p-6 shadow-soft">
+          <div class="text-sm font-semibold text-brand-800">Комфорт</div>
+          <div class="mt-2 font-bold">Бережный подход</div>
+          <p class="mt-2 text-sm text-slate-600">Минимум стресса: спокойно, аккуратно, с заботой.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-100 p-6 shadow-soft">
+          <div class="text-sm font-semibold text-brand-800">Удобно</div>
+          <div class="mt-2 font-bold">Связь по телефону и WhatsApp</div>
+          <p class="mt-2 text-sm text-slate-600">Быстро отвечаем, помогаем выбрать время и услугу.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
+        <div class="flex items-end justify-between gap-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Отзывы</h2>
+            <p class="mt-2 text-slate-600">Сюда можно поставить реальные отзывы (Яндекс/2ГИС) и добавить ссылку “Смотреть все”.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 grid lg:grid-cols-3 gap-4">
+          <figure class="rounded-3xl bg-white p-6 shadow-soft border border-slate-100">
+            <blockquote class="text-sm text-slate-700">“Очень аккуратно и спокойно. Объяснили план лечения и ничего не навязывали.”</blockquote>
+            <figcaption class="mt-4 text-xs text-slate-500">Пациент • пример</figcaption>
+          </figure>
+          <figure class="rounded-3xl bg-white p-6 shadow-soft border border-slate-100">
+            <blockquote class="text-sm text-slate-700">“Сделали гигиену без боли, дали советы по уходу. Приду ещё.”</blockquote>
+            <figcaption class="mt-4 text-xs text-slate-500">Пациент • пример</figcaption>
+          </figure>
+          <figure class="rounded-3xl bg-white p-6 shadow-soft border border-slate-100">
+            <blockquote class="text-sm text-slate-700">“Удобно записаться через WhatsApp, быстро нашли время.”</blockquote>
+            <figcaption class="mt-4 text-xs text-slate-500">Пациент • пример</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment -->
+    <section id="appointment" class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
+      <div class="rounded-[32px] bg-gradient-to-r from-brand-50 to-white border border-slate-100 shadow-soft p-6 sm:p-10 grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Запись на приём</h2>
+          <p class="mt-2 text-slate-600">Оставьте контакты — мы перезвоним. Или напишите в WhatsApp.</p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="tel:+79154143855" class="inline-flex items-center justify-center rounded-2xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-700">Позвонить</a>
+            <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-white">WhatsApp</a>
+          </div>
+
+          <div class="mt-6 text-xs text-slate-500">
+            Нажимая «Отправить», вы соглашаетесь на обработку персональных данных.
+          </div>
+        </div>
+
+        <form class="bg-white rounded-3xl border border-slate-100 p-6 shadow-soft" onsubmit="return handleLead(event)">
+          <div class="grid gap-4">
+            <label class="grid gap-2">
+              <span class="text-sm font-semibold">Имя</span>
+              <input required name="name" class="rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-200" placeholder="Как к вам обращаться" />
+            </label>
+            <label class="grid gap-2">
+              <span class="text-sm font-semibold">Телефон</span>
+              <input required name="phone" inputmode="tel" class="rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-200" placeholder="+7 ..." />
+            </label>
+            <label class="grid gap-2">
+              <span class="text-sm font-semibold">Комментарий (необязательно)</span>
+              <textarea name="comment" rows="3" class="rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-200" placeholder="Например: болит зуб / гигиена / консультация"></textarea>
+            </label>
+
+            <button class="rounded-2xl bg-accent-600 px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-300" type="submit">
+              Отправить
+            </button>
+
+            <p id="leadStatus" class="text-sm text-slate-600" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts" class="bg-brand-900 text-white">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:py-16 grid lg:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Контакты</h2>
+          <div class="mt-4 grid gap-3 text-sm text-white/90">
+            <div><span class="text-white/60">Адрес:</span> Москва, Варшавское ш., 118, корп. 1</div>
+            <div><span class="text-white/60">Телефон:</span> <a class="underline decoration-white/30 hover:decoration-white" href="tel:+79154143855">+7 915 414-38-55</a></div>
+            <div><span class="text-white/60">WhatsApp:</span> <a class="underline decoration-white/30 hover:decoration-white" href="https://wa.me/79154143855" target="_blank" rel="noreferrer">+7 915 414-38-55</a></div>
+            <div><span class="text-white/60">Режим работы:</span> ежедневно 09:00–21:00</div>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://yandex.com.tr/maps/org/dental_clinic_na_varshavke/208834871767/?indoorLevel=1&ll=37.618085%2C55.631534&z=17" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl bg-white text-brand-900 px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-90">
+              Открыть в Яндекс.Картах
+            </a>
+            <a href="#appointment" class="inline-flex items-center justify-center rounded-2xl border border-white/20 px-5 py-3 text-sm font-semibold hover:bg-white/10">
+              Записаться
+            </a>
+          </div>
+
+          <div class="mt-8 text-xs text-white/60">
+            Имеются противопоказания. Необходима консультация специалиста.
+          </div>
+        </div>
+
+        <div class="rounded-[28px] overflow-hidden border border-white/10 shadow-soft bg-white">
+          <!-- Яндекс карта (виджет) -->
+          <iframe
+            title="Карта"
+            src="https://yandex.com.tr/map-widget/v1/?ll=37.618085%2C55.631534&z=17&mode=search&text=Dental%20Clinic%20%D0%BD%D0%B0%20%D0%92%D0%B0%D1%80%D1%88%D0%B0%D0%B2%D0%BA%D0%B5"
+            width="100%" height="420" frameborder="0" allowfullscreen="true" style="display:block;">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-4 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-white/60">
+          <div>© <span id="year"></span> Dental Clinic на Варшавке</div>
+          <div class="flex flex-wrap gap-4">
+            <a href="#" class="hover:text-white">Политика конфиденциальности</a>
+            <a href="#" class="hover:text-white">Согласие на обработку ПД</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer"
+     class="fixed bottom-5 right-5 z-50 rounded-full bg-green-500 text-white shadow-soft w-14 h-14 flex items-center justify-center hover:opacity-90"
+     aria-label="Написать в WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20.5 11.6c0 4.7-3.8 8.5-8.5 8.5-1.5 0-2.9-.4-4.1-1L3.5 20.5l1.4-4.1c-.6-1.2-.9-2.6-.9-4.1C4 7 7.8 3.1 12 3.1c4.7 0 8.5 3.8 8.5 8.5Z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M9.2 8.8c.2-.4.4-.4.7-.4h.6c.2 0 .4.1.5.4.2.5.7 1.7.8 1.8.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1.9.8 1.7 1.1 2 .9.3-.2.5-.5.7-.8.2-.3.4-.3.6-.2.2.1 1.6.8 1.9.9.3.2.5.2.6.3.1.1.1.7-.2 1.4-.3.7-1.5 1.3-2.1 1.4-.6.1-1.4.2-2.3-.1-.9-.3-2.1-.8-3.3-2-.9-.9-1.6-2-2-2.8-.4-.8-.8-1.9-.8-2.8 0-.9.4-1.4.6-1.7Z" fill="white"/>
+    </svg>
+  </a>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = !mobileNav.classList.contains('hidden');
+      mobileNav.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // close mobile nav on link click
+    mobileNav?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+
+    function handleLead(e){
+      e.preventDefault();
+      const form = e.target;
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      // Пока без бэкенда: делаем удобный флоу через WhatsApp.
+      const msg = `Здравствуйте! Хочу записаться.\nИмя: ${data.name}\nТелефон: ${data.phone}${data.comment ? `\nКомментарий: ${data.comment}` : ''}`;
+      const url = `https://wa.me/79154143855?text=${encodeURIComponent(msg)}`;
+
+      const status = document.getElementById('leadStatus');
+      status.textContent = 'Открываю WhatsApp с готовым сообщением…';
+
+      window.open(url, '_blank', 'noopener,noreferrer');
+      form.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
