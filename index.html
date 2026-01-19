@@ -80,7 +80,13 @@
       <div class="flex items-center gap-3">
         <a class="hover:opacity-90" href="tel:+79295305314" aria-label="Позвонить в клинику">+7 929 530 53 14</a>
         <span class="opacity-60">•</span>
-        <a class="hover:opacity-90" href="https://wa.me/79295305314" target="_blank" rel="noreferrer" aria-label="Написать в WhatsApp">WhatsApp</a>
+        <a class="hover:opacity-90 inline-flex items-center gap-2" href="https://wa.me/79154143855" target="_blank" rel="noreferrer" aria-label="Написать в WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20.5 11.6c0 4.7-3.8 8.5-8.5 8.5-1.5 0-2.9-.4-4.1-1L3.5 20.5l1.4-4.1c-.6-1.2-.9-2.6-.9-4.1C4 7 7.8 3.1 12 3.1c4.7 0 8.5 3.8 8.5 8.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9.2 8.8c.2-.4.4-.4.7-.4h.6c.2 0 .4.1.5.4.2.5.7 1.7.8 1.8.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1.9.8 1.7 1.1 2 .9.3-.2.5-.5.7-.8.2-.3.4-.3.6-.2.2.1 1.6.8 1.9.9.3.2.5.2.6.3.1.1.1.7-.2 1.4-.3.7-1.5 1.3-2.1 1.4-.6.1-1.4.2-2.3-.1-.9-.3-2.1-.8-3.3-2-.9-.9-1.6-2-2-2.8-.4-.8-.8-1.9-.8-2.8 0-.9.4-1.4.6-1.7Z" fill="currentColor"/>
+          </svg>
+          WhatsApp
+        </a>
       </div>
     </div>
   </div>
@@ -137,8 +143,8 @@
   <!-- Hero -->
   <main id="top">
     <section class="relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-white"></div>
-      <div class="relative mx-auto max-w-7xl px-4 pt-10 pb-10 sm:pt-14 sm:pb-14 grid lg:grid-cols-2 gap-10 items-center">
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-white pointer-events-none"></div>
+      <div class="relative z-10 mx-auto max-w-7xl px-4 pt-10 pb-10 sm:pt-14 sm:pb-14 grid lg:grid-cols-2 gap-10 items-center">
         <div>
           <div class="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-brand-800 ring-1 ring-brand-100">
             <span class="h-2 w-2 rounded-full bg-brand-600"></span>
@@ -147,17 +153,53 @@
           <h1 class="mt-4 text-3xl sm:text-5xl font-extrabold tracking-tight">
             Стоматология рядом с метро: <span class="text-brand-700">быстро, аккуратно, без стресса</span>
           </h1>
+          <div class="mt-2 text-sm text-slate-600">Работаем с 2018 года — 8 лет опыта</div>
           <p class="mt-4 text-slate-600 text-base sm:text-lg max-w-xl">
             Диагностика, лечение, гигиена и эстетика. Понятный план лечения и честная коммуникация.
           </p>
 
           <div class="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="#appointment" class="inline-flex items-center justify-center rounded-2xl bg-accent-600 px-6 py-3 text-sm font-semibold text-white shadow-soft hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-300">
+            <a href="#appointment" class="inline-flex items-center justify-center rounded-2xl bg-accent-600 px-6 py-3 text-sm font-semibold text-white shadow-soft hover:bg-accent-700 hover:shadow-lg active:translate-y-0.5 active:shadow-soft focus:outline-none focus:ring-2 focus:ring-accent-300">
               Записаться на консультацию
             </a>
-            <a href="#services" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 px-6 py-3 text-sm font-semibold hover:bg-white">
+            <a href="#services" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 px-6 py-3 text-sm font-semibold hover:bg-white hover:shadow-soft active:translate-y-0.5">
               Смотреть услуги
             </a>
+          </div>
+          <div class="mt-3 inline-flex items-center gap-2 rounded-full border border-brand-100 bg-white px-3 py-2 text-xs font-semibold text-brand-700 shadow-soft">
+            С 2018 года · 8 лет опыта
+          </div>
+
+          <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl">
+            <div class="flex items-center gap-2 rounded-2xl border border-slate-100 bg-white px-3 py-3 text-xs text-slate-600 shadow-soft">
+              <span class="h-2 w-2 rounded-full bg-brand-600"></span>
+              Ежедневно 09:00–21:00
+            </div>
+            <div class="flex items-center gap-2 rounded-2xl border border-slate-100 bg-white px-3 py-3 text-xs text-slate-600 shadow-soft">
+              <span class="h-2 w-2 rounded-full bg-brand-600"></span>
+              Стерилизация по стандартам
+            </div>
+            <div class="flex items-center gap-2 rounded-2xl border border-slate-100 bg-white px-3 py-3 text-xs text-slate-600 shadow-soft">
+              <span class="h-2 w-2 rounded-full bg-brand-600"></span>
+              Безболезненно и бережно
+            </div>
+            <div class="flex items-center gap-2 rounded-2xl border border-slate-100 bg-white px-3 py-3 text-xs text-slate-600 shadow-soft">
+              <span class="h-2 w-2 rounded-full bg-brand-600"></span>
+              Оплата: карта/наличные
+            </div>
+            <div class="flex items-center gap-2 rounded-2xl border border-slate-100 bg-white px-3 py-3 text-xs text-slate-600 shadow-soft">
+              <span class="h-2 w-2 rounded-full bg-brand-600"></span>
+              Гарантия обсуждается <span class="text-[10px] text-slate-400">(placeholder)</span>
+            </div>
+          </div>
+
+          <div class="mt-4 max-w-xl rounded-2xl border border-dashed border-brand-200 bg-brand-50 px-4 py-3 text-xs text-brand-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div>
+              Лицензия клиники <span class="text-[10px] text-brand-400">(placeholder)</span>
+            </div>
+            <button type="button" class="inline-flex items-center justify-center rounded-full border border-brand-200 bg-white px-3 py-1 text-xs font-semibold text-brand-700 hover:bg-white/80">
+              Скоро добавим скан
+            </button>
           </div>
 
           <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl">
@@ -217,23 +259,50 @@
                   <div class="mt-1 text-xs text-slate-500">Варшавское ш., 118, корп. 1</div>
                 </div>
                 <div class="flex items-center gap-2">
-                  <a href="tel:+79295305314" class="rounded-2xl bg-brand-600 px-3 py-2 text-xs font-semibold text-white hover:bg-brand-700">Позвонить</a>
-                  <a href="https://wa.me/79295305314" target="_blank" rel="noreferrer" class="rounded-2xl border border-slate-200 px-3 py-2 text-xs font-semibold hover:bg-slate-50">WhatsApp</a>
+                  <a href="tel:+79154143855" class="rounded-2xl bg-brand-600 px-3 py-2 text-xs font-semibold text-white hover:bg-brand-700 hover:shadow-soft active:translate-y-0.5">Позвонить</a>
+                  <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 px-3 py-2 text-xs font-semibold hover:bg-slate-50 hover:shadow-soft active:translate-y-0.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M20.5 11.6c0 4.7-3.8 8.5-8.5 8.5-1.5 0-2.9-.4-4.1-1L3.5 20.5l1.4-4.1c-.6-1.2-.9-2.6-.9-4.1C4 7 7.8 3.1 12 3.1c4.7 0 8.5 3.8 8.5 8.5Z" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/>
+                      <path d="M9.2 8.8c.2-.4.4-.4.7-.4h.6c.2 0 .4.1.5.4.2.5.7 1.7.8 1.8.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1.9.8 1.7 1.1 2 .9.3-.2.5-.5.7-.8.2-.3.4-.3.6-.2.2.1 1.6.8 1.9.9.3.2.5.2.6.3.1.1.1.7-.2 1.4-.3.7-1.5 1.3-2.1 1.4-.6.1-1.4.2-2.3-.1-.9-.3-2.1-.8-3.3-2-.9-.9-1.6-2-2-2.8-.4-.8-.8-1.9-.8-2.8 0-.9.4-1.4.6-1.7Z" fill="#0f172a"/>
+                    </svg>
+                    WhatsApp
+                  </a>
                 </div>
               </div>
 
               <div class="mt-6 grid gap-3">
                 <div class="rounded-2xl bg-brand-50 p-4">
                   <div class="text-sm font-semibold">Что получите на консультации</div>
-                  <ul class="mt-2 text-sm text-slate-600 list-disc pl-5 space-y-1">
-                    <li>Осмотр и первичная диагностика</li>
-                    <li>План лечения по шагам</li>
-                    <li>Рекомендации по уходу</li>
+                  <ul class="mt-3 space-y-2 text-sm text-slate-600">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-600 text-white">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M5 12.5l4.2 4.2L19 7.8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      Осмотр и первичная диагностика
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-600 text-white">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M5 12.5l4.2 4.2L19 7.8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      План лечения по шагам
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-600 text-white">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M5 12.5l4.2 4.2L19 7.8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      Рекомендации по уходу
+                    </li>
                   </ul>
                 </div>
                 <div class="rounded-2xl bg-white border border-slate-100 p-4">
                   <div class="text-sm font-semibold">Время работы</div>
-                  <div class="mt-2 text-sm text-slate-600">Ежедневно: 09:00–21:00</div>
+                  <div class="mt-2 text-sm font-semibold text-brand-800">Ежедневно 09:00–21:00</div>
                 </div>
               </div>
 
@@ -273,7 +342,7 @@
           </div>
         </div>
 
-        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="doctorsGrid"></div>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4" id="doctorsGrid"></div>
         <div class="mt-4 text-xs text-slate-500">Фото-иллюстрации. Профили врачей будут добавлены позже.</div>
       </div>
     </section>
@@ -335,8 +404,14 @@
           <p class="mt-2 text-slate-600">Заполните форму — данные сразу уйдут в WhatsApp. Мы ответим и подберём время.</p>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-soft hover:opacity-90">WhatsApp</a>
-            <a href="tel:+79154143855" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-white">Позвонить</a>
+            <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-soft hover:opacity-90 hover:shadow-lg active:translate-y-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20.5 11.6c0 4.7-3.8 8.5-8.5 8.5-1.5 0-2.9-.4-4.1-1L3.5 20.5l1.4-4.1c-.6-1.2-.9-2.6-.9-4.1C4 7 7.8 3.1 12 3.1c4.7 0 8.5 3.8 8.5 8.5Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M9.2 8.8c.2-.4.4-.4.7-.4h.6c.2 0 .4.1.5.4.2.5.7 1.7.8 1.8.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1.9.8 1.7 1.1 2 .9.3-.2.5-.5.7-.8.2-.3.4-.3.6-.2.2.1 1.6.8 1.9.9.3.2.5.2.6.3.1.1.1.7-.2 1.4-.3.7-1.5 1.3-2.1 1.4-.6.1-1.4.2-2.3-.1-.9-.3-2.1-.8-3.3-2-.9-.9-1.6-2-2-2.8-.4-.8-.8-1.9-.8-2.8 0-.9.4-1.4.6-1.7Z" fill="white"/>
+              </svg>
+              WhatsApp
+            </a>
+            <a href="tel:+79154143855" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-white hover:shadow-soft active:translate-y-0.5">Позвонить</a>
           </div>
 
           <div class="mt-6 text-xs text-slate-500">
@@ -377,7 +452,7 @@
               <textarea name="comment" rows="3" class="rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-200" placeholder="Например: болит зуб / гигиена / консультация"></textarea>
             </label>
 
-            <button class="rounded-2xl bg-accent-600 px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-300" type="submit">
+            <button class="rounded-2xl bg-accent-600 px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-accent-700 hover:shadow-lg active:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-accent-300" type="submit">
               Отправить
             </button>
 
@@ -410,7 +485,11 @@
             <div class="font-semibold text-white">Как нас найти</div>
             <p class="mt-1">5 минут пешком от метро. Ориентир — торговый центр рядом с домом 118к1. Парковка во дворе (placeholder).</p>
             <div class="mt-3 flex flex-wrap gap-2">
-              <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl bg-green-500 px-4 py-2 text-xs font-semibold text-white shadow-soft hover:opacity-90">
+              <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-green-500 px-4 py-2 text-xs font-semibold text-white shadow-soft hover:opacity-90 hover:shadow-lg active:translate-y-0.5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20.5 11.6c0 4.7-3.8 8.5-8.5 8.5-1.5 0-2.9-.4-4.1-1L3.5 20.5l1.4-4.1c-.6-1.2-.9-2.6-.9-4.1C4 7 7.8 3.1 12 3.1c4.7 0 8.5 3.8 8.5 8.5Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M9.2 8.8c.2-.4.4-.4.7-.4h.6c.2 0 .4.1.5.4.2.5.7 1.7.8 1.8.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1.9.8 1.7 1.1 2 .9.3-.2.5-.5.7-.8.2-.3.4-.3.6-.2.2.1 1.6.8 1.9.9.3.2.5.2.6.3.1.1.1.7-.2 1.4-.3.7-1.5 1.3-2.1 1.4-.6.1-1.4.2-2.3-.1-.9-.3-2.1-.8-3.3-2-.9-.9-1.6-2-2-2.8-.4-.8-.8-1.9-.8-2.8 0-.9.4-1.4.6-1.7Z" fill="white"/>
+                </svg>
                 Написать в WhatsApp
               </a>
               <a href="tel:+79154143855" class="inline-flex items-center justify-center rounded-2xl border border-white/20 px-4 py-2 text-xs font-semibold hover:bg-white/10">
@@ -420,10 +499,10 @@
           </div>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="https://yandex.ru/maps/?rtext=~55.631534%2C37.618085" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl bg-white text-brand-900 px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-90">
+            <a href="https://yandex.ru/maps/?rtext=~55.631534%2C37.618085" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl bg-white text-brand-900 px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-90 hover:shadow-lg active:translate-y-0.5">
               Построить маршрут
             </a>
-            <a href="https://yandex.ru/maps/?ll=37.618085%2C55.631534&z=17&pt=37.618085%2C55.631534,pm2rdm" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl border border-white/20 px-5 py-3 text-sm font-semibold hover:bg-white/10">
+            <a href="https://yandex.ru/maps/?ll=37.618085%2C55.631534&z=17&pt=37.618085%2C55.631534,pm2rdm" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl border border-white/20 px-5 py-3 text-sm font-semibold hover:bg-white/10 hover:shadow-soft active:translate-y-0.5">
               Открыть в Яндекс.Картах
             </a>
           </div>
@@ -476,13 +555,13 @@
   <!-- Mobile Sticky CTA -->
   <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/80 backdrop-blur border-t border-slate-200 shadow-[0_-8px_24px_rgba(2,44,46,0.15)]">
     <div class="mx-auto max-w-7xl px-4 py-3 grid grid-cols-3 gap-2 text-xs">
-      <a href="tel:+79154143855" class="inline-flex items-center justify-center rounded-2xl bg-brand-600 px-2 py-2 font-semibold text-white">
+      <a href="tel:+79154143855" class="inline-flex items-center justify-center rounded-2xl bg-brand-600 px-2 py-2 font-semibold text-white hover:shadow-soft active:translate-y-0.5">
         Позвонить
       </a>
-      <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 px-2 py-2 font-semibold bg-white">
+      <a href="https://wa.me/79154143855" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 px-2 py-2 font-semibold bg-white hover:shadow-soft active:translate-y-0.5">
         WhatsApp
       </a>
-      <a href="#appointment" class="inline-flex items-center justify-center rounded-2xl bg-accent-600 px-2 py-2 font-semibold text-white">
+      <a href="#appointment" class="inline-flex items-center justify-center rounded-2xl bg-accent-600 px-2 py-2 font-semibold text-white hover:shadow-soft active:translate-y-0.5">
         Записаться
       </a>
     </div>
@@ -599,14 +678,14 @@
       }
     ];
 
-    const doctors = Array.from({ length: 8 }).map((_, i) => {
+    const doctors = Array.from({ length: 4 }).map((_, i) => {
       const n = String(i + 1).padStart(2, '0');
       return {
         id: `doc-${n}`,
         name: 'Скоро добавим имя',
         role: 'Врач-стоматолог',
         experience: 'Стаж: —',
-        img: '/doctors/team.png',
+        img: `/doctors/${n}.webp`,
         tags: ['Терапия', 'Гигиена']
       };
     });
